@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phishing Awareness Demo</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .box {
+      background: white;
+      width: 90%;
+      max-width: 380px;
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,.15);
+    }
+
+    input, button {
+      width: 100%;
+      padding: 13px;
+      margin-top: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #111;
+      color: white;
+      border: 0;
+      border-radius: 7px;
+    }
+
+    .warning {
+      margin-top: 20px;
+      color: #c00;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Login Simulation</h2>
+
+  <p>Cybersecurity Awareness Demo</p>
+
+  <input id="username" placeholder="Username">
+
+  <input id="password"
+         type="password"
+         placeholder="Password email">
+
+  <button onclick="check()">Login</button>
+
+  <div id="result"></div>
+</div>
+
+<script>
+function check() {
+  // Password disimpan atau dihantar.
+  document.getElementById("password").value = "";
+
+  document.getElementById("result").innerHTML =
+    '<p class="warning">' +
+    '⚠️ Ini ialah simulasi phishing.<br><br>' +
+    'Jangan masukkan password sebenar pada laman yang mencurigakan.' +
+    '</p>';
+}
+</script>
+
+</body>
+</html>
